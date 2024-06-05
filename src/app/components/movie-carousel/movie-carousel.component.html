@@ -1,0 +1,42 @@
+<p-carousel [value]="nowPlayingMovies || []" [numVisible]="3" [numScroll]="3" [circular]="true" [autoplayInterval]="3000"
+    [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+        <h2>Header Content</h2>
+    </ng-template>
+   
+    <ng-template pTemplate="item" let-movie>
+        <div class="p-col-12 p-md-4 p-lg-4">
+            <div class="relative rounded-lg shadow-lg bg-gradient-to-br from-purple-400 to-indigo-600 mx-2 h-full flex-shrink-0 overflow-hidden">
+                <a [routerLink]="['/movie/', movie.id]" routerLinkActive="router-link-active" title="The Greatest Hits"
+                    class="block w-full h-64 relative">
+                    <img loading="lazy" class="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
+                        src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="{{movie.title}}">
+                    <div class="absolute bottom-0 left-0 px-2 py-1 ml-1 mb-1 bg-black bg-opacity-75 text-white rounded-xl">
+                        <span class="text-xs opacity-80">{{movie.release_date | date:'yyyy'}}</span>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-white">View Details</h3>
+                    </div>
+                </a>
+                <div class="px-4 py-3">
+                    <h2 class="text-lg font-semibold text-white mb-2">
+                        <a href="/movie/1011082-the-greatest-hits" title="@movieVideo.Title" class="hover:text-gray-100 transition-colors duration-300">
+                            {{movie.title}}
+                        </a>
+                    </h2>
+                    <h3 class="text-sm font-medium text-white opacity-80">{{movie.Name}}</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center text-white">
+                            <svg class="h-6 w-6 text-yellow-400 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <!-- İçbükey Yıldız -->
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4l1.74 5.24h5.65L14.5 12l1.89 5.76H13.26L12 20l-1.26-2.24H6.61L8.5 12l-4.89-2.76h5.65L12 4z" />
+                            </svg>
+                            <span class="font-semibold">{{movie.vote_average}}/10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
