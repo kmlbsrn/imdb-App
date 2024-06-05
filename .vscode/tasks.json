@@ -1,0 +1,42 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558
+  "version": "2.0.0",
+  "tasks": [
+***REMOVED***{
+***REMOVED***  "type": "npm",
+***REMOVED***  "script": "start",
+***REMOVED***  "isBackground": true,
+***REMOVED***  "problemMatcher": {
+***REMOVED******REMOVED***"owner": "typescript",
+***REMOVED******REMOVED***"pattern": "$tsc",
+***REMOVED******REMOVED***"background": {
+***REMOVED******REMOVED***  "activeOnStart": true,
+***REMOVED******REMOVED***  "beginsPattern": {
+***REMOVED******REMOVED******REMOVED***"regexp": "(.*?)"
+***REMOVED******REMOVED******REMOVED***,
+***REMOVED******REMOVED***  "endsPattern": {
+***REMOVED******REMOVED******REMOVED***"regexp": "bundle generation complete"
+***REMOVED******REMOVED******REMOVED***
+***REMOVED***  ***REMOVED***
+***REMOVED******REMOVED***
+  ***REMOVED***,
+***REMOVED***{
+***REMOVED***  "type": "npm",
+***REMOVED***  "script": "test",
+***REMOVED***  "isBackground": true,
+***REMOVED***  "problemMatcher": {
+***REMOVED******REMOVED***"owner": "typescript",
+***REMOVED******REMOVED***"pattern": "$tsc",
+***REMOVED******REMOVED***"background": {
+***REMOVED******REMOVED***  "activeOnStart": true,
+***REMOVED******REMOVED***  "beginsPattern": {
+***REMOVED******REMOVED******REMOVED***"regexp": "(.*?)"
+***REMOVED******REMOVED******REMOVED***,
+***REMOVED******REMOVED***  "endsPattern": {
+***REMOVED******REMOVED******REMOVED***"regexp": "bundle generation complete"
+***REMOVED******REMOVED******REMOVED***
+***REMOVED***  ***REMOVED***
+***REMOVED******REMOVED***
+  ***REMOVED***
+  ]
+***REMOVED***

@@ -1,0 +1,20 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+***REMOVED***{
+***REMOVED***  "name": "ng serve",
+***REMOVED***  "type": "chrome",
+***REMOVED***  "request": "launch",
+***REMOVED***  "preLaunchTask": "npm: start",
+***REMOVED***  "url": "http://localhost:4200/"
+  ***REMOVED***,
+***REMOVED***{
+***REMOVED***  "name": "ng test",
+***REMOVED***  "type": "chrome",
+***REMOVED***  "request": "launch",
+***REMOVED***  "preLaunchTask": "npm: test",
+***REMOVED***  "url": "http://localhost:9876/debug.html"
+  ***REMOVED***
+  ]
+***REMOVED***

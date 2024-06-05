@@ -1,0 +1,38 @@
+{
+  "name": "imdb-app",
+  "version": "0.0.0",
+  "scripts": {
+***REMOVED***"ng": "ng",
+***REMOVED***"start": "ng serve",
+***REMOVED***"build": "ng build",
+***REMOVED***"watch": "ng build --watch --configuration development",
+***REMOVED***"test": "ng test"
+***REMOVED***,
+  "private": true,
+  "dependencies": {
+***REMOVED***"@angular/animations": "^17.0.0",
+***REMOVED***"@angular/common": "^17.0.0",
+***REMOVED***"@angular/compiler": "^17.0.0",
+***REMOVED***"@angular/core": "^17.0.0",
+***REMOVED***"@angular/forms": "^17.0.0",
+***REMOVED***"@angular/platform-browser": "^17.0.0",
+***REMOVED***"@angular/platform-browser-dynamic": "^17.0.0",
+***REMOVED***"@angular/router": "^17.0.0",
+***REMOVED***"rxjs": "~7.8.0",
+***REMOVED***"tslib": "^2.3.0",
+***REMOVED***"zone.js": "~0.14.2"
+***REMOVED***,
+  "devDependencies": {
+***REMOVED***"@angular-devkit/build-angular": "^17.0.10",
+***REMOVED***"@angular/cli": "^17.0.10",
+***REMOVED***"@angular/compiler-cli": "^17.0.0",
+***REMOVED***"@types/jasmine": "~5.1.0",
+***REMOVED***"jasmine-core": "~5.1.0",
+***REMOVED***"karma": "~6.4.0",
+***REMOVED***"karma-chrome-launcher": "~3.2.0",
+***REMOVED***"karma-coverage": "~2.2.0",
+***REMOVED***"karma-jasmine": "~5.1.0",
+***REMOVED***"karma-jasmine-html-reporter": "~2.1.0",
+***REMOVED***"typescript": "~5.2.2"
+***REMOVED***
+***REMOVED***
