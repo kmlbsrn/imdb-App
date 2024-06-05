@@ -1,10 +1,9 @@
-<p-carousel [value]="nowPlayingMovies || []" [numVisible]="3" [numScroll]="3" [circular]="true" [autoplayInterval]="3000"
-***REMOVED***[responsiveOptions]="responsiveOptions">
+<p-carousel [value]="nowPlayingMovies || []" [numVisible]="3" [numScroll]="3" [circular]="true"
+***REMOVED***[autoplayInterval]="3000" [responsiveOptions]="responsiveOptions" >
 ***REMOVED***<ng-template pTemplate="header">
 ***REMOVED******REMOVED***<h2>Header Content</h2>
 ***REMOVED***</ng-template>
-   
-***REMOVED***<ng-template pTemplate="item" let-movie>
+***REMOVED***<ng-template pTemplate="item"  let-movie>
 ***REMOVED******REMOVED***<div class="p-col-12 p-md-4 p-lg-4">
 ***REMOVED******REMOVED******REMOVED***<div class="relative rounded-lg shadow-lg bg-gradient-to-br from-purple-400 to-indigo-600 mx-2 h-full flex-shrink-0 overflow-hidden">
 ***REMOVED******REMOVED******REMOVED******REMOVED***<a [routerLink]="['/movie/', movie.id]" routerLinkActive="router-link-active" title="The Greatest Hits"
@@ -28,7 +27,6 @@
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="flex items-center justify-between mt-4">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="flex items-center text-white">
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<svg class="h-6 w-6 text-yellow-400 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<!-- İçbükey Yıldız -->
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***d="M12 4l1.74 5.24h5.65L14.5 12l1.89 5.76H13.26L12 20l-1.26-2.24H6.61L8.5 12l-4.89-2.76h5.65L12 4z" />
 ***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</svg>

@@ -1,49 +1,39 @@
-
-import { Component ***REMOVED*** from '@angular/core';
-import {CarouselModule***REMOVED*** from 'primeng/carousel';
+import { Component, Input ***REMOVED*** from '@angular/core';
+import { CarouselModule ***REMOVED*** from 'primeng/carousel';
 import { MovieService ***REMOVED*** from '../../services/movie.service';
-import { Movie, NowPlaying ***REMOVED*** from '../../models/movies/movieModel.inteface';
+import { Movie ***REMOVED*** from '../../models/movies/movieModel.inteface';
 import { HttpClientModule ***REMOVED*** from '@angular/common/http';
 import { RouterLink ***REMOVED*** from '@angular/router';
-
 
 @Component({
   selector: 'app-movie-carousel',
   standalone: true,
-  imports: [CarouselModule,HttpClientModule,RouterLink],
+  imports: [CarouselModule, HttpClientModule, RouterLink],
   templateUrl: './movie-carousel.component.html',
-  styleUrl: './movie-carousel.component.scss'
+  styleUrl: './movie-carousel.component.scss',
 ***REMOVED***
 export class MovieCarouselComponent {
-
   responsiveOptions: any[] = [
 ***REMOVED***{
-***REMOVED******REMOVED***breakpoint: '1024px',
-***REMOVED******REMOVED***numVisible: 3,
-***REMOVED******REMOVED***numScroll: 3
+***REMOVED***  breakpoint: '1024px',
+***REMOVED***  numVisible: 3,
+***REMOVED***  numScroll: 3,
   ***REMOVED***,
 ***REMOVED***{
-***REMOVED******REMOVED***breakpoint: '768px',
-***REMOVED******REMOVED***numVisible: 2,
-***REMOVED******REMOVED***numScroll: 2
+***REMOVED***  breakpoint: '768px',
+***REMOVED***  numVisible: 2,
+***REMOVED***  numScroll: 2,
   ***REMOVED***,
 ***REMOVED***{
-***REMOVED******REMOVED***breakpoint: '560px',
-***REMOVED******REMOVED***numVisible: 1,
-***REMOVED******REMOVED***numScroll: 1
-  ***REMOVED***
-];
+***REMOVED***  breakpoint: '560px',
+***REMOVED***  numVisible: 1,
+***REMOVED***  numScroll: 1,
+  ***REMOVED***,
+  ];
 
-constructor(private movieService:MovieService) { ***REMOVED***
+  @Input() nowPlayingMovies: Movie[] = [];
 
-  nowPlayingMovies!: Movie[] ;
-  
-  
-  ngOnInit() {
-***REMOVED***console.log('MovieCarouselComponent');
-***REMOVED***this.movieService.getNowPlaying(1).subscribe((data) => {
-***REMOVED***  this.nowPlayingMovies = data.results;
-***REMOVED***  console.log(this.nowPlayingMovies);
-***REMOVED******REMOVED***;
-***REMOVED***
+  constructor() {***REMOVED***
+
+  ngOnInit() {***REMOVED***
 ***REMOVED***

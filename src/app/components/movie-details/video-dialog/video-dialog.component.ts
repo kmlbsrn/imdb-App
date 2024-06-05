@@ -1,19 +1,20 @@
-import { Component, Inject, OnInit ***REMOVED*** from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA ***REMOVED*** from '@angular/material/dialog';
-import { DomSanitizer, SafeResourceUrl ***REMOVED*** from '@angular/platform-browser';
+import { Component, Inject ***REMOVED*** from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef ***REMOVED*** from '@angular/material/dialog';
 import { MovieVideo ***REMOVED*** from '../../../models/movies/movieModel.inteface';
-
+import { DomSanitizer, SafeResourceUrl ***REMOVED*** from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-video',
-  templateUrl: './video.component.html',
-  styleUrls: ['./video.component.scss'],
+  selector: 'app-video-dialog',
+  standalone: true,
+  imports: [],
+  templateUrl: './video-dialog.component.html',
+  styleUrl: './video-dialog.component.scss'
 ***REMOVED***
-export class VideoComponent implements OnInit {
+export class VideoDialogComponent {
   videoUrl: SafeResourceUrl | undefined;
 
   constructor(
-***REMOVED***public dialogRef: MatDialogRef<VideoComponent>,
+***REMOVED***public dialogRef: MatDialogRef<VideoDialogComponent>,
 ***REMOVED***@Inject(MAT_DIALOG_DATA) public video: MovieVideo,
 ***REMOVED***private sanitizer: DomSanitizer
   ) {***REMOVED***

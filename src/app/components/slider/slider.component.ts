@@ -1,4 +1,4 @@
-import { Component ***REMOVED*** from '@angular/core';
+import { Component, Input ***REMOVED*** from '@angular/core';
 import { MovieService ***REMOVED*** from '../../services/movie.service';
 import { Movie, NowPlaying ***REMOVED*** from '../../models/movies/movieModel.inteface';
 import { delay ***REMOVED*** from 'rxjs';
@@ -26,29 +26,30 @@ import { RouterLink ***REMOVED*** from '@angular/router';
   ],
 ***REMOVED***
 export class SliderComponent {
-  movies!: Movie[];
+  
 
   constructor(private movieService: MovieService) {***REMOVED***
 
   currentSlide = 0;
 
+  @Input() movies : Movie[] = [];  
+
   ngOnInit() {
-***REMOVED***this.getNowPlayingMovies(1);
 ***REMOVED***this.sliderTimer();
 ***REMOVED***
 
-  getNowPlayingMovies(page: number) {
-***REMOVED***this.movieService
-***REMOVED***  .getNowPlaying(page)
-***REMOVED***  .pipe(delay(2000))
-***REMOVED***  .subscribe((data) => {
+  // getNowPlayingMovies(page: number) {
+  //   this.movieService
+  //***REMOVED*** .getNowPlaying(page)
+  //***REMOVED*** .pipe(delay(2000))
+  //***REMOVED*** .subscribe((data) => {
 ***REMOVED******REMOVED***
-***REMOVED******REMOVED***console.log(data);
-***REMOVED******REMOVED***this.movies = data.results;
-***REMOVED******REMOVED***console.log(this.movies);
+  //***REMOVED***   console.log(data);
+  //***REMOVED***   this.movies = data.results;
+  //***REMOVED***   console.log(this.movies);
 ***REMOVED******REMOVED***
-***REMOVED***  ***REMOVED***;
-***REMOVED***
+  //***REMOVED*** ***REMOVED***;
+  // ***REMOVED***
 
   sliderTimer() {
 ***REMOVED***setInterval(() => {

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed ***REMOVED*** from '@angular/core/testing';
 
-import { VideoComponent ***REMOVED*** from './video.component';
+import { VideoListComponent ***REMOVED*** from './video-list.component';
 
-describe('VideoComponent', () => {
-  let component: VideoComponent;
-  let fixture: ComponentFixture<VideoComponent>;
+describe('VideoListComponent', () => {
+  let component: VideoListComponent;
+  let fixture: ComponentFixture<VideoListComponent>;
 
   beforeEach(async () => {
 ***REMOVED***await TestBed.configureTestingModule({
-***REMOVED***  imports: [VideoComponent]
+***REMOVED***  imports: [VideoListComponent]
 ***REMOVED******REMOVED***
 ***REMOVED***.compileComponents();
 ***REMOVED***
-***REMOVED***fixture = TestBed.createComponent(VideoComponent);
+***REMOVED***fixture = TestBed.createComponent(VideoListComponent);
 ***REMOVED***component = fixture.componentInstance;
 ***REMOVED***fixture.detectChanges();
   ***REMOVED***;

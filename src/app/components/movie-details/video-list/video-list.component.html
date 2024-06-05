@@ -1,0 +1,22 @@
+<div class="cards">
+***REMOVED***@if (videos.length === 0) {
+
+***REMOVED***<div class="card">
+***REMOVED******REMOVED***<img class="card-image
+***REMOVED******REMOVED******REMOVED******REMOVED***" src="https://via.placeholder.com/150" alt="Card Image">
+***REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED***<h5>No Trailers Found</h5>
+***REMOVED******REMOVED******REMOVED***<p>There are no trailers available for this movie.</p>
+***REMOVED******REMOVED***</div>
+***REMOVED***</div>
+  ***REMOVED***
+***REMOVED***@for (video of videos; track $index) {
+***REMOVED***<div class="card" (click)="openVideoDialog(video)">
+***REMOVED******REMOVED***<img class="card-image" src="https://img.youtube.com/vi/{{video?.key***REMOVED******REMOVED***/mqdefault.jpg" alt="Card Image">
+***REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED***<h5>{{video.name***REMOVED******REMOVED***</h5>
+***REMOVED******REMOVED******REMOVED***<p>This is a short description of the card.</p>
+***REMOVED******REMOVED***</div>
+***REMOVED***</div>
+  ***REMOVED***
+</div>

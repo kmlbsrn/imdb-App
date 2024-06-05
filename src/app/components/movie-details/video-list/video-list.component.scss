@@ -1,0 +1,63 @@
+.cards {
+***REMOVED***display: flex;
+***REMOVED***flex-wrap: wrap;
+***REMOVED***justify-content: center;
+***REMOVED***gap: 10px;
+
+***REMOVED***.card {
+***REMOVED******REMOVED***margin: 10px;
+***REMOVED******REMOVED***width: 100%;
+***REMOVED******REMOVED***max-width: 300px;
+***REMOVED******REMOVED***height: auto;
+***REMOVED******REMOVED***background-color: #f5f5f5;
+***REMOVED******REMOVED***border-radius: 10px;
+***REMOVED******REMOVED***box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+***REMOVED******REMOVED***transition: 0.3s;
+***REMOVED******REMOVED***cursor: pointer;
+
+***REMOVED******REMOVED***&:hover {
+***REMOVED******REMOVED******REMOVED***box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+***REMOVED***  ***REMOVED***
+
+***REMOVED******REMOVED***.card-body {
+***REMOVED******REMOVED******REMOVED***padding: 20px;
+***REMOVED******REMOVED******REMOVED***text-align: center;
+
+***REMOVED******REMOVED******REMOVED***h5 {
+***REMOVED******REMOVED******REMOVED******REMOVED***font-size: 20px;
+***REMOVED******REMOVED******REMOVED******REMOVED***font-weight: bold;
+***REMOVED******REMOVED******REMOVED******REMOVED***color: #333;
+***REMOVED******REMOVED***  ***REMOVED***
+
+***REMOVED******REMOVED******REMOVED***p {
+***REMOVED******REMOVED******REMOVED******REMOVED***font-size: 16px;
+***REMOVED******REMOVED******REMOVED******REMOVED***color: #666;
+***REMOVED******REMOVED***  ***REMOVED***
+***REMOVED***  ***REMOVED***
+
+***REMOVED******REMOVED***.card-image {
+***REMOVED******REMOVED******REMOVED***width: 100%;
+***REMOVED******REMOVED******REMOVED***height: 300px;
+***REMOVED******REMOVED******REMOVED***border-radius: 10px 10px 0 0;
+***REMOVED***  ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+@media (max-width: 768px) {
+***REMOVED***.cards {
+***REMOVED******REMOVED***justify-content: space-around;
+  ***REMOVED***
+
+***REMOVED***.card {
+***REMOVED******REMOVED***max-width: 45%;
+  ***REMOVED***
+***REMOVED***
+
+@media (max-width: 480px) {
+***REMOVED***.cards {
+***REMOVED******REMOVED***justify-content: center;
+  ***REMOVED***
+
+***REMOVED***.card {
+***REMOVED******REMOVED***max-width: 100%;
+  ***REMOVED***
+***REMOVED***
