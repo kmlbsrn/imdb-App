@@ -1,0 +1,247 @@
+@import "variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35rem;
+  color: #999;
+  background-color: #000;
+  position: relative;
+
+  @media (min-width: $breakpoint-xsmall) {
+***REMOVED***height: 50rem;
+***REMOVED***position: relative;
+***REMOVED***
+
+  @media (min-width: $breakpoint-medium) {
+***REMOVED***position: relative;
+***REMOVED***display: block;
+***REMOVED***height: 0;
+***REMOVED***padding-bottom: 40%;
+***REMOVED***
+***REMOVED***
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $breakpoint-xsmall) {
+***REMOVED***.slider {
+***REMOVED***  position: relative !important;
+  ***REMOVED***
+***REMOVED***
+***REMOVED***
+
+
+.backdrop {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+
+  @media (min-width: $breakpoint-medium) {
+***REMOVED***position: absolute;
+***REMOVED***top: 0;
+***REMOVED***right: 0;
+***REMOVED***display: block;
+***REMOVED***width: 71.1%;
+***REMOVED***height: 100%;
+***REMOVED***
+
+  &::after {
+***REMOVED***position: absolute;
+***REMOVED***top: 0;
+***REMOVED***right: 0;
+***REMOVED***bottom: 0;
+***REMOVED***left: 0;
+***REMOVED***display: block;
+***REMOVED***content: "";
+***REMOVED***background-image: linear-gradient(
+***REMOVED***  to top,
+***REMOVED***  rgba(0, 0, 0, 1) 0%,
+***REMOVED***  rgba(0, 0, 0, 0.1) 50%,
+***REMOVED***  rgba(0, 0, 0, 0.1) 100%
+***REMOVED***
+
+***REMOVED***@media (min-width: $breakpoint-medium) {
+***REMOVED***  background-image: linear-gradient(
+***REMOVED******REMOVED***to right,
+***REMOVED******REMOVED***#000 0,
+***REMOVED******REMOVED***transparent 50%,
+***REMOVED******REMOVED***transparent 100%
+  ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+  > div {
+***REMOVED***width: 100%;
+
+***REMOVED***@media (min-width: $breakpoint-medium) {
+***REMOVED***  display: inline;
+  ***REMOVED***
+***REMOVED***
+***REMOVED***
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  background: none;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $breakpoint-medium) {
+***REMOVED***display: none;
+***REMOVED***
+***REMOVED***
+
+.image {
+  display: inline-block;
+  max-width: none;
+  height: 100%;
+
+  @media (max-width: ($breakpoint-medium - 1)) {
+***REMOVED***width: 100%;
+***REMOVED***object-fit: cover;
+***REMOVED***
+***REMOVED***
+
+.pane {
+  padding: 0 1.5rem 1.5rem;
+
+  @media (min-width: $breakpoint-small) {
+***REMOVED***padding: 0 4rem 4rem;
+***REMOVED***
+
+  @media (min-width: $breakpoint-medium) {
+***REMOVED***position: absolute;
+***REMOVED***top: 0;
+***REMOVED***bottom: 0;
+***REMOVED***left: 0;
+***REMOVED***z-index: 1;
+***REMOVED***display: flex;
+***REMOVED***align-items: center;
+***REMOVED***width: 55%;
+***REMOVED***height: 100%;
+***REMOVED***
+
+  @media (min-width: $breakpoint-large) {
+***REMOVED***padding-right: 5rem;
+***REMOVED***padding-left: 5rem;
+***REMOVED***
+
+  @media (min-width: $breakpoint-xlarge) {
+***REMOVED***width: 45%;
+***REMOVED***
+***REMOVED***
+
+.name {
+  margin: 0 0 1.4rem;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: $letter-spacing;
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-small) {
+***REMOVED***margin-bottom: 1.8rem;
+***REMOVED***
+
+  @media (min-width: $breakpoint-large) {
+***REMOVED***font-size: 2.4vw;
+***REMOVED***
+  &:focus {
+***REMOVED***outline: none;
+***REMOVED***
+***REMOVED***
+
+.meta {
+  font-size: 1.4rem;
+
+  @media (min-width: $breakpoint-small) {
+***REMOVED***display: flex;
+***REMOVED***
+
+  @media (min-width: 1650px) {
+***REMOVED***font-size: 0.9vw;
+***REMOVED***
+***REMOVED***
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.3rem;
+
+  @media (min-width: $breakpoint-small) {
+***REMOVED***margin: 0 1.2rem 0 0;
+***REMOVED***
+***REMOVED***
+
+.info {
+  display: flex;
+  align-items: center;
+
+  span {
+***REMOVED***margin-right: 0.4rem;
+
+***REMOVED***&:not(:last-child):after {
+***REMOVED***  content: "|";
+***REMOVED***  margin-right: 9px;
+***REMOVED***  margin-left: 9px;
+  ***REMOVED***
+***REMOVED***
+***REMOVED***
+
+.desc {
+  display: block;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: $base-font-weight;
+  color: $base-font-color;
+  font-family: $font-family-serif-dosis;
+
+  @media (max-width: ($breakpoint-small - 1)) {
+***REMOVED***display: none;
+***REMOVED***
+
+  @media (min-width: 1650px) {
+***REMOVED***font-size: 0.9vw;
+***REMOVED***
+***REMOVED***
+
+.trailer {
+  margin-top: 3rem;
+
+  @media (max-width: ($breakpoint-medium - 1)) {
+***REMOVED***display: none;
+***REMOVED***
+
+  @media (min-width: 1650px) {
+***REMOVED***font-size: 0.9vw;
+***REMOVED***
+***REMOVED***
+
+.rate {
+  font-size: 12px;
+
+  i {
+***REMOVED***font-size: 16px;
+***REMOVED***margin-right: 5px;
+***REMOVED***
+
+  .material-icons {
+***REMOVED***color: #dcf836;
+***REMOVED***
+
+  span {
+***REMOVED***color: $base-font-color;
+***REMOVED***font-size: 16px;
+***REMOVED***font-weight: 400;
+***REMOVED***
+***REMOVED***

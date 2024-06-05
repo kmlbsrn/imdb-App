@@ -11,14 +11,18 @@
   "private": true,
   "dependencies": {
 ***REMOVED***"@angular/animations": "^17.0.0",
+***REMOVED***"@angular/cdk": "^17.3.8",
 ***REMOVED***"@angular/common": "^17.0.0",
 ***REMOVED***"@angular/compiler": "^17.0.0",
 ***REMOVED***"@angular/core": "^17.0.0",
 ***REMOVED***"@angular/forms": "^17.0.0",
+***REMOVED***"@angular/material": "^17.3.8",
 ***REMOVED***"@angular/platform-browser": "^17.0.0",
 ***REMOVED***"@angular/platform-browser-dynamic": "^17.0.0",
 ***REMOVED***"@angular/router": "^17.0.0",
+***REMOVED***"primeng": "^17.16.1",
 ***REMOVED***"rxjs": "~7.8.0",
+***REMOVED***"subsink": "^1.0.2",
 ***REMOVED***"tslib": "^2.3.0",
 ***REMOVED***"zone.js": "~0.14.2"
 ***REMOVED***,
@@ -27,12 +31,15 @@
 ***REMOVED***"@angular/cli": "^17.0.10",
 ***REMOVED***"@angular/compiler-cli": "^17.0.0",
 ***REMOVED***"@types/jasmine": "~5.1.0",
+***REMOVED***"autoprefixer": "^10.4.19",
 ***REMOVED***"jasmine-core": "~5.1.0",
 ***REMOVED***"karma": "~6.4.0",
 ***REMOVED***"karma-chrome-launcher": "~3.2.0",
 ***REMOVED***"karma-coverage": "~2.2.0",
 ***REMOVED***"karma-jasmine": "~5.1.0",
 ***REMOVED***"karma-jasmine-html-reporter": "~2.1.0",
+***REMOVED***"postcss": "^8.4.38",
+***REMOVED***"tailwindcss": "^3.4.3",
 ***REMOVED***"typescript": "~5.2.2"
 ***REMOVED***
 ***REMOVED***

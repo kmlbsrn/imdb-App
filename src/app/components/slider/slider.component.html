@@ -1,0 +1,28 @@
+<div class="hero">
+***REMOVED***<ng-container *ngFor="let slider of movies; let i = index">
+***REMOVED******REMOVED***<div class="slider" *ngIf="currentSlide == i" @fade>
+***REMOVED******REMOVED******REMOVED***<div class="backdrop">
+***REMOVED******REMOVED******REMOVED******REMOVED***<div class="lazyloaded">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img alt="{{slider?.title***REMOVED******REMOVED***" class="lazyload image" src="https://image.tmdb.org/t/p/original/{{slider?.backdrop_path***REMOVED******REMOVED***">
+***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED***<div class="pane">
+***REMOVED******REMOVED******REMOVED******REMOVED***<div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h1 class="name" >
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a [routerLink]="['/movie/', slider.id]">{{slider?.title***REMOVED******REMOVED***</a>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</h1>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="meta">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="info">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<span class="rate"><i class="material-icons">star</i><span>{{slider?.vote_average***REMOVED******REMOVED***</span>/10</span>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<span> {{slider?.vote_count***REMOVED******REMOVED*** Reviews</span>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<span>{{slider?.release_date | date: 'yyyy' ***REMOVED******REMOVED***</span>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="desc">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***{{slider?.overview ***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED***</div>
+***REMOVED***</ng-container>
+</div>

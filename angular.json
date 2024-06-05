@@ -20,16 +20,12 @@
 ***REMOVED******REMOVED******REMOVED***"outputPath": "dist/imdb-app",
 ***REMOVED******REMOVED******REMOVED***"index": "src/index.html",
 ***REMOVED******REMOVED******REMOVED***"browser": "src/main.ts",
-***REMOVED******REMOVED******REMOVED***"polyfills": [
-***REMOVED******REMOVED******REMOVED***  "zone.js"
-***REMOVED******REMOVED******REMOVED***],
+***REMOVED******REMOVED******REMOVED***"polyfills": ["zone.js"],
 ***REMOVED******REMOVED******REMOVED***"tsConfig": "tsconfig.app.json",
 ***REMOVED******REMOVED******REMOVED***"inlineStyleLanguage": "scss",
-***REMOVED******REMOVED******REMOVED***"assets": [
-***REMOVED******REMOVED******REMOVED***  "src/favicon.ico",
-***REMOVED******REMOVED******REMOVED***  "src/assets"
-***REMOVED******REMOVED******REMOVED***],
+***REMOVED******REMOVED******REMOVED***"assets": ["src/favicon.ico", "src/assets"],
 ***REMOVED******REMOVED******REMOVED***"styles": [
+***REMOVED******REMOVED******REMOVED***  "@angular/material/prebuilt-themes/indigo-pink.css",
 ***REMOVED******REMOVED******REMOVED***  "src/styles.scss"
 ***REMOVED******REMOVED******REMOVED***],
 ***REMOVED******REMOVED******REMOVED***"scripts": []
@@ -79,17 +75,14 @@
 ***REMOVED******REMOVED***"test": {
 ***REMOVED******REMOVED***  "builder": "@angular-devkit/build-angular:karma",
 ***REMOVED******REMOVED***  "options": {
-***REMOVED******REMOVED******REMOVED***"polyfills": [
-***REMOVED******REMOVED******REMOVED***  "zone.js",
-***REMOVED******REMOVED******REMOVED***  "zone.js/testing"
-***REMOVED******REMOVED******REMOVED***],
+***REMOVED******REMOVED******REMOVED***"polyfills": ["zone.js", "zone.js/testing"],
 ***REMOVED******REMOVED******REMOVED***"tsConfig": "tsconfig.spec.json",
 ***REMOVED******REMOVED******REMOVED***"inlineStyleLanguage": "scss",
-***REMOVED******REMOVED******REMOVED***"assets": [
-***REMOVED******REMOVED******REMOVED***  "src/favicon.ico",
-***REMOVED******REMOVED******REMOVED***  "src/assets"
-***REMOVED******REMOVED******REMOVED***],
+***REMOVED******REMOVED******REMOVED***"assets": ["src/favicon.ico", "src/assets"],
 ***REMOVED******REMOVED******REMOVED***"styles": [
+***REMOVED******REMOVED******REMOVED***  "@angular/material/prebuilt-themes/indigo-pink.css",
+***REMOVED******REMOVED******REMOVED***  "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+***REMOVED******REMOVED******REMOVED***  "node_modules/primeng/resources/primeng.min.css",
 ***REMOVED******REMOVED******REMOVED***  "src/styles.scss"
 ***REMOVED******REMOVED******REMOVED***],
 ***REMOVED******REMOVED******REMOVED***"scripts": []
@@ -97,5 +90,8 @@
 ***REMOVED***  ***REMOVED***
 ***REMOVED******REMOVED***
   ***REMOVED***
+***REMOVED***,
+  "cli": {
+***REMOVED***"analytics": false
 ***REMOVED***
 ***REMOVED***

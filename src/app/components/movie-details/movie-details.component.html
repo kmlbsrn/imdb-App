@@ -1,0 +1,142 @@
+<div class="container mx-auto py-8">
+***REMOVED***<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+***REMOVED******REMOVED***<div class="col-span-3">
+***REMOVED******REMOVED******REMOVED***<div class="flex flex-col md:flex-row  shadow-md rounded-lg overflow-hidden relative">
+***REMOVED******REMOVED******REMOVED******REMOVED***<!-- Background Image - Movie Backdrop -->
+***REMOVED******REMOVED******REMOVED******REMOVED***<img *ngIf="movieDetails?.backdrop_path"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***[src]="['https://image.tmdb.org/t/p/original/' + movieDetails.backdrop_path]"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***alt="@movieDetails.Title" class="absolute inset-0 w-full h-full object-cover"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***style="z-index: -1; opacity:0.7;">
+***REMOVED******REMOVED******REMOVED******REMOVED***<!-- Left Column - Movie Poster -->
+***REMOVED******REMOVED******REMOVED******REMOVED***<div class="md:w-1/3 p-4">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img [src]="['https://image.tmdb.org/t/p/w500/'+ movieDetails.poster_path]"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***alt="@movieDetails.Title" class="w-full rounded-lg shadow-md"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***style="max-width: 596.89px; max-height: 895.33px;">
+
+
+***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED***<!-- Right Column - Movie Details -->
+***REMOVED******REMOVED******REMOVED******REMOVED***<div class="md:w-2/3 p-4 rounded-lg shadow-lg" style="background-color: rgba(0, 0, 0, 0.5);">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h2 class="text-3xl font-semibold mb-4 text-white">{{movieDetails.title***REMOVED******REMOVED***</h2>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a href="https://www.imdb.com/title/{{movieDetails.imdb_id***REMOVED******REMOVED***/" target="_blank"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***rel="noopener noreferrer">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<span class="icon text-white"><i class="fab fa-imdb fa-2x"></i></span>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</a>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-300 mb-4">Release Date: {{movieDetails.releaseDate***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-300 mb-4">Genres: </p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-300 mb-4">{{movieDetails.overview***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<!-- Additional Movie Details -->
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-300 mb-4">Budget: {{movieDetails.budget***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-300 mb-4">Revenue: {{movieDetails.revenue***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-300 mb-4">Runtime: {{movieDetails.runtime***REMOVED******REMOVED*** minutes</p>
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<button class="bg-red-500 text-white font-semibold px-4 py-2 rounded-lg shadow-md changeFavorite"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***data-movie-id="@movieDetails.Id">Remove from Favorites</button>
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<button class="bg-green-500 text-white font-semibold px-4 py-2 rounded-lg shadow-md addFavorite"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***data-movie-id="@movieDetails.Id">Add to Favorites</button>
+
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<!-- Star Rating -->
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<!-- add tab view  for  Videos use tailwind and angular material -->
+
+***REMOVED******REMOVED******REMOVED******REMOVED***</div>
+
+***REMOVED******REMOVED******REMOVED***</div>
+
+***REMOVED******REMOVED******REMOVED***<mat-tab-group class="mt-5 mb-5" mat-align-tabs="center">
+
+***REMOVED******REMOVED******REMOVED******REMOVED***<mat-tab label="Trailers">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="cards">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@if (trailers.length === 0) {
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img class="card-image
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***" src="https://via.placeholder.com/150" alt="Card Image">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h5>No Trailers Found</h5>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p>There are no trailers available for this movie.</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@for (trailer of trailers; track $index) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card" (click)="openVideoDialog(trailer)">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img class="card-image" src="https://img.youtube.com/vi/{{trailer?.key***REMOVED******REMOVED***/mqdefault.jpg" alt="Card Image">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h5>{{trailer.name***REMOVED******REMOVED***</h5>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p>This is a short description of the card.</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED***</mat-tab>
+
+***REMOVED******REMOVED******REMOVED******REMOVED***<mat-tab label="Behind The Scenes">
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="cards">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@if (behindTheScenes.length === 0) {
+
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img class="card-image
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***" src="https://via.placeholder.com/150" alt="Card Image">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h5>No Behind The Scenes Found</h5>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p>There are no Behind The Scenes available for this movie.</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@for (behindTheScene of behindTheScenes; track $index) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card" (click)="openVideoDialog(behindTheScene)">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img class="card-image
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***" src="https://img.youtube.com/vi/{{behindTheScene?.key***REMOVED******REMOVED***/mqdefault.jpg" alt="Card Image">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="card-body">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h5>{{behindTheScene.name***REMOVED******REMOVED***</h5>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p>This is a short description of the card.</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED***</mat-tab>
+
+***REMOVED******REMOVED******REMOVED******REMOVED***<mat-tab label="Cast">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="mt-8 overflow-x-auto">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h3 class="text-2xl font-semibold mb-4">Cast</h3>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="flex flex-nowrap space-x-4 pb-4">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@for (castMember of cast; track $index) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<a class="flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden" style="width: 200px;">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@if (castMember.profile_path !=null)
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***{
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="https://image.tmdb.org/t/p/w500/{{castMember.profile_path***REMOVED******REMOVED***"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** alt="@castMember.Name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** class="w-full h-64 object-cover cursor-pointer"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@else
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***{
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="~/image/no-avatar.jpg"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** alt="@castMember.Name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** class="w-full h-64 object-cover cursor-pointer"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED*** style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="p-4">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h4 class="text-lg font-semibold mb-2">{{castMember.name***REMOVED******REMOVED***</h4>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-700">{{castMember.character***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</a>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+
+***REMOVED******REMOVED******REMOVED******REMOVED***</mat-tab>
+
+***REMOVED******REMOVED******REMOVED***</mat-tab-group>
+
+***REMOVED******REMOVED***</div>
+***REMOVED***</div>
+</div>
