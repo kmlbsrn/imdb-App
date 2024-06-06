@@ -9,11 +9,12 @@ import { MatDialog, MatDialogModule ***REMOVED*** from '@angular/material/dialog
 import { VideoDialogComponent ***REMOVED*** from './video-dialog/video-dialog.component';
 import { VideoListComponent ***REMOVED*** from './video-list/video-list.component';
 import { switchMap ***REMOVED*** from 'rxjs/operators';
+import { PeopleComponent ***REMOVED*** from './people/people.component';
 
 @Component({
   selector: 'app-movie-details',
   standalone: true,
-  imports: [CommonModule, MatTabsModule, MatDialogModule, VideoListComponent],
+  imports: [CommonModule, MatTabsModule, MatDialogModule, VideoListComponent,PeopleComponent],
   templateUrl: './movie-details.component.html',
   styleUrls: ['./movie-details.component.scss'],
 ***REMOVED***
@@ -37,6 +38,10 @@ export class MovieDetailsComponent implements OnInit, OnDestroy {
   ) {***REMOVED***
 
   ngOnInit() {
+
+   
+  
+
 ***REMOVED***this.subs.sink = this.route.paramMap.pipe(
 ***REMOVED***  switchMap(params => {
 ***REMOVED******REMOVED***this.movieId = Number(params.get('id'));
@@ -46,19 +51,7 @@ export class MovieDetailsComponent implements OnInit, OnDestroy {
 ***REMOVED***  this.movieDetails = data;
 ***REMOVED******REMOVED***;
 
-***REMOVED***this.subs.sink = this.route.paramMap.pipe(
-***REMOVED***  switchMap(params => {
-***REMOVED******REMOVED***this.movieId = Number(params.get('id'));
-***REMOVED******REMOVED***return this.movieService.getMovieVideos(this.movieId);
-***REMOVED***  ***REMOVED***
-***REMOVED***).subscribe(data => {
-***REMOVED***  this.movieVideos = data.results;
-***REMOVED***  this.trailers = this.getTrailers();
-***REMOVED***  this.showTrailers = this.trailers.length > 0;
-***REMOVED***  this.behindTheScenes = this.getBehindTheScenes();
-***REMOVED***  this.showBehindTheScenes = this.behindTheScenes.length > 0;
-***REMOVED***  
-***REMOVED******REMOVED***;
+   
 
 ***REMOVED***this.subs.sink = this.route.paramMap.pipe(
 ***REMOVED***  switchMap(params => {

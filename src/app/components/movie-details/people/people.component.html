@@ -1,0 +1,92 @@
+<div class="mt-8 overflow-x-auto">
+***REMOVED***<h3 class="text-2xl font-semibold mb-4">{{title***REMOVED******REMOVED***</h3>
+***REMOVED***<div class="flex flex-nowrap space-x-4 pb-4">
+
+***REMOVED******REMOVED***@switch (title) {
+***REMOVED******REMOVED***@case('Cast'){
+***REMOVED******REMOVED***@for (castMember of cast; track $index) {
+***REMOVED******REMOVED***<a class="flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden" style="width: 200px;">
+***REMOVED******REMOVED******REMOVED***@if (castMember.profile_path !=null)
+***REMOVED******REMOVED******REMOVED***{
+***REMOVED******REMOVED******REMOVED***<img src="https://image.tmdb.org/t/p/w500/{{castMember.profile_path***REMOVED******REMOVED***" [alt]="castMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED***@else
+***REMOVED******REMOVED******REMOVED***{
+
+***REMOVED******REMOVED******REMOVED***@switch (castMember.gender) {
+
+***REMOVED******REMOVED******REMOVED***@case(0){
+***REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_images_male.png" [alt]="castMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED***@case (1) {
+***REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_image_female.jpg" [alt]="castMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED***@case(2){
+***REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_images_male.png" [alt]="castMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED***@default {
+***REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_images_male.png" [alt]="castMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED***  ***REMOVED***
+
+***REMOVED******REMOVED***  ***REMOVED***
+
+***REMOVED******REMOVED******REMOVED***<div class="p-4">
+***REMOVED******REMOVED******REMOVED******REMOVED***<h4 class="text-lg font-semibold mb-2">{{castMember.name***REMOVED******REMOVED***</h4>
+***REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-700">{{castMember.character***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED***</a>
+***REMOVED***  ***REMOVED***
+***REMOVED***  ***REMOVED***
+
+***REMOVED******REMOVED***@case ('Crew') {
+***REMOVED******REMOVED******REMOVED***@for (crewMember of crew; track $index) {
+***REMOVED******REMOVED******REMOVED******REMOVED***<a class="flex-shrink-0 bg-white shadow-md rounded-lg overflow-hidden" style="width: 200px;">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@if (crewMember.profile_path !=null)
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***{
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="https://image.tmdb.org/t/p/w500/{{crewMember.profile_path***REMOVED******REMOVED***" [alt]="crewMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@else
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***{
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@switch (crewMember.gender) {
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@case(0){
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_images_male.png" [alt]="crewMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@case (1) {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_image_female.jpg" [alt]="crewMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@case(2){
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_images_male.png" [alt]="crewMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***@default {
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<img src="assets\images\noImages\no_images_male.png" [alt]="crewMember.name"
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***class="w-full h-64 object-cover cursor-pointer" style="aspect-ratio: 2/3;">
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<div class="p-4">
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<h4 class="text-lg font-semibold mb-2">{{crewMember.name***REMOVED******REMOVED***</h4>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***<p class="text-gray-700">{{crewMember.job***REMOVED******REMOVED***</p>
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***</div>
+***REMOVED******REMOVED******REMOVED******REMOVED***</a>
+***REMOVED******REMOVED******REMOVED***  ***REMOVED***
+***REMOVED***  ***REMOVED***
+***REMOVED***  ***REMOVED***
+
+
+***REMOVED***</div>
+
+</div>

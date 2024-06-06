@@ -81,8 +81,9 @@
 ***REMOVED******REMOVED******REMOVED***"assets": ["src/favicon.ico", "src/assets"],
 ***REMOVED******REMOVED******REMOVED***"styles": [
 ***REMOVED******REMOVED******REMOVED***  "@angular/material/prebuilt-themes/indigo-pink.css",
-***REMOVED******REMOVED******REMOVED***  "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-***REMOVED******REMOVED******REMOVED***  "node_modules/primeng/resources/primeng.min.css",
+***REMOVED******REMOVED******REMOVED***  "/node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+***REMOVED******REMOVED******REMOVED***  "/node_modules/primeng/resources/primeng.min.css",
+***REMOVED******REMOVED******REMOVED***  "/node_modules/ngx-toastr/toastr.css",
 ***REMOVED******REMOVED******REMOVED***  "src/styles.scss"
 ***REMOVED******REMOVED******REMOVED***],
 ***REMOVED******REMOVED******REMOVED***"scripts": []

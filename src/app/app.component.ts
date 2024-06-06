@@ -4,6 +4,7 @@ import { RouterOutlet ***REMOVED*** from '@angular/router';
 import { FooterComponent ***REMOVED*** from './components/includes/footer/footer.component';
 import { HeaderComponent ***REMOVED*** from './components/includes/header/header.component';
 import { HomeComponent ***REMOVED*** from './components/home/home.component';
+import { ToastrModule, ToastrService ***REMOVED*** from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -20,4 +21,11 @@ import { HomeComponent ***REMOVED*** from './components/home/home.component';
 ***REMOVED***
 export class AppComponent {
   title = 'imdb-App';
+
+  constructor(private toastr:ToastrService) {
+***REMOVED***
+
+
+  
+
 ***REMOVED***
